@@ -43,3 +43,13 @@
 - The API schema defined by the OpenAPI standard decides how the data is sent using JSON Schema. Visit http://127.0.0.1:8000/openapi.json from your browser.
   &nbsp;
 - FastAPI also supports another automatic documentation method provided by Redoc ( https://github.com/Redocly/redoc).Enter the URL (http://localhost:8000/redoc)
+  &nbsp;
+- FastAPI doesnt contain any built-in development server, It implements ASGI standards and is lightning fast. ASGI stands for **Asynchronous Server Gateway Interface.**
+  &nbsp;
+- The WSGI (Web Server Gateway Interface the (older standard)) compliant web servers are not suitable for asyncio applications. Uvicorn uses uvloop and httptools libraries. It also provides support for HTTP/2 and WebSockets, which cannot be handled by WSGI.
+  &nbsp;
+- uvloop id is similar to the built-in asyncio event loop and httptools library handles the http protocols.
+  &nbsp;
+- Relational State Transfer (REST) is a software architectural style. REST defines how the architecture of a web application should behave. It is a resource based architecture where everything that the REST server hosts, (a file, an image, or a row in a table of a database), is a resource, having many representations.
+  &nbsp;
+- REST uses HTTP verbs or methods for the operation on the resources. The POST, GET, PUT and DELETE methods perform CREATE, READ, UPDATE and DELETE operations respectively.
