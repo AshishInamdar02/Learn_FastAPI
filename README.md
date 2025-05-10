@@ -79,3 +79,7 @@
 - The URLs endpoint or path can have one or more variable parameters. They can be accepted by using Pythons string formatting notation.
   &nbsp;
 - This variable parameter can be accepted in a variable as defined in the path and passed to the formal parameters defined in the function bound to the operation decorator.
+  &nbsp;
+- A classical method of passing the request data to the server is to append a query string to the URL. Assuming that a Python script on a server is executed as CGI, a list of key-value pairs concatenated by the ampersand (&) forms the query string, which is appended to the URL by putting a question mark (?) as a separator.
+  &nbsp;
+- The trailing part of the URL, after (?), is the query string, which is then parsed by the server-side script for further processing. FastAPI automatically treats the part of the endpoint which is not a path parameter as a query string and parses it into parameters and its values.
