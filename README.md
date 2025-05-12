@@ -83,3 +83,20 @@
 - A classical method of passing the request data to the server is to append a query string to the URL. Assuming that a Python script on a server is executed as CGI, a list of key-value pairs concatenated by the ampersand (&) forms the query string, which is appended to the URL by putting a question mark (?) as a separator.
   &nbsp;
 - The trailing part of the URL, after (?), is the query string, which is then parsed by the server-side script for further processing. FastAPI automatically treats the part of the endpoint which is not a path parameter as a query string and parses it into parameters and its values.
+  &nbsp;
+- It is possible to apply validation conditions on path parameters as well as query parameters of the URL. In order to apply the validation conditions on a path parameter, you need to import the Path class.
+  &nbsp;
+- In addition to the default value of the parameter, you can specify the maximum and minimum length in the case of a string parameter.
+  &nbsp;
+- Validation rules can be applied on numeric parameters too, using the operators as:
+  &nbsp;
+  ```
+  gt − greater than
+  ge − greater than or equal
+  lt − less than
+  le − less than or equal
+  ```
+  &nbsp;
+- While the client can send the path and query parameters to the API server using GET method, we need to apply POST method to send some binary data as a part of the HTTP requests.
+  &nbsp;
+- This binary data may be in the form of an object of any Python class. It forms the request body. FastAPI uses Pydantic library for this purpose.
