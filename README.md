@@ -100,3 +100,18 @@
 - While the client can send the path and query parameters to the API server using GET method, we need to apply POST method to send some binary data as a part of the HTTP requests.
   &nbsp;
 - This binary data may be in the form of an object of any Python class. It forms the request body. FastAPI uses Pydantic library for this purpose.
+  &nbsp;
+- Pydantic is a Python library for data parsing and validation. It uses the type hinting mechanism and validates the types during the runtime. Pydantic defines BaseModel class. It acts as the base class for creating user defined models.
+  &nbsp;
+- Pydantic will automatically get the data types converted whenever possible else it will raise an exception. Pydantic also contains a Field class to declare metadata and validation rules for the model attributes.
+  &nbsp;
+- Pydantic models can be used to map with ORM models like SQLAlchemy or Peewee. Example JSON for the User class is as follows:
+
+  ```
+  {
+    "name": "Ashish",
+    "age": 31,
+    "email": null,
+    "phone_no": null
+  }
+  ```
